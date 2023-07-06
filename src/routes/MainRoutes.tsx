@@ -6,6 +6,7 @@ import ContactUsPage from '../pages/ContactUsPage';
 import MoviesPage from '../pages/MoviesPage';
 import LoginPage from '../pages/LoginPage';
 import MoviePage from '../pages/MoviePage';
+import FavoritePage from '../pages/FavoritePage';
 
 const MainRoutes = () => {
     const publicRoutes = [
@@ -16,7 +17,8 @@ const MainRoutes = () => {
         {id: 5, path: '/aboutus', element: <AboutUsPage />},
         {id: 6, path: '/contactus', element: <ContactUsPage />},
         {id: 7, path: '/login', element: <LoginPage />},
-        {id: 8, path: '/favorite', element: <></> },
+        {id: 8, path: '/favorite', element: <FavoritePage /> },
+        {id: 9, path: '/favorite/:id', element: <></> },
     ]
 
     return(

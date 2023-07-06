@@ -16,6 +16,17 @@ const MovieDetails: FC = () => {
         return <Navigate to={'/*'} replace />
     }
 
+    const addToLocalstorage = (filmId: number) => {
+        let oldValues = JSON.parse(localStorage.getItem('values') || '[]') as number[];
+        
+        if(oldValues.includes(filmId)){
+            return
+        }
+
+        oldValues.push(filmId);
+        localStorage.setItem('values', JSON.stringify(oldValues));
+    }
+
     return(
         <div className="movieDetails container">
             <div className="leftBlock">
@@ -32,6 +43,7 @@ const MovieDetails: FC = () => {
                 <h4>{movie.title}</h4>
                 <p>{movie.description}</p>
             </div>
+            <button onClick={() => addToLocalstorage(movie.id)}>Add to favorite</button>
         </div>
     )
 }
