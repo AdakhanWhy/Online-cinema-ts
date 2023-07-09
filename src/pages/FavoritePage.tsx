@@ -1,6 +1,10 @@
+import FavoriteMovies from "../components/Favorite/FavoriteMovies";
+
 const FavoritePage = () => {
     return(
-        <div>FavoritePage</div>
+        <>
+            <FavoriteMovies />
+        </>
     )
 }
 
